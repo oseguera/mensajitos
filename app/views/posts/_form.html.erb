@@ -13,10 +13,18 @@
 
   <div class="form-group">
     <%= form.label :body, 'Message'%>
-    <%= form.text_area :body, placeholder: 'Enter a message...', class: 'form-control', rows: 3  %>
+    <%= form.text_area :body,
+      placeholder: 'Enter a message...',
+      class: 'form-control',
+      rows: 3,
+      'data-action': 'keypress->posts#sendMessageWhenEnter'
+    %>
   </div>
 
   <div class="actions">
-    <%= form.submit value: 'Send', class: 'btn btn-primary' %>
+    <%= form.submit value: 'Send',
+      class: 'btn btn-primary',
+      'data-target': 'posts.submitButton'
+    %>
   </div>
 <% end %>
