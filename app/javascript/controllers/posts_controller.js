@@ -6,6 +6,7 @@ export default class extends ApplicationController {
 
   sendMessageWhenEnter(e) {
     if (e.key === "Enter" && e.shiftKey === false) {
+      e.preventDefault();
       this.submitButtonTarget.click();
     }
   }
