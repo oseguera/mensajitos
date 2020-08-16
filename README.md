@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## LatinTweet
 
-Things you may want to cover:
+A basic Chat Application made with Rails 6, using [StimulusReflex](https://docs.stimulusreflex.com), [CableReady](https://github.com/hopsoft/cable_ready]) and [Bootstrap 4](https://getbootstrap.com).
 
-* Ruby version
+### Basic Requirements
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Ruby 2.7
+- Rails 6
