@@ -21,11 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  host: localhost
-  database: <%= ENV['LATIN_DB_NAME'] %>
-  encoding: utf8
-  pool: 5
-  timeout: 5000
-  username: <%= ENV['LATIN_DB_USERNAME'] %>
-  password: <%= ENV['LATIN_DB_PASSWORD'] %>
+  <<: *default
+  database: db/production.sqlite3
