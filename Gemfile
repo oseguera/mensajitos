@@ -53,8 +53,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "redis", "~> 4.2"
-gem "cable_ready", "~> 4.3"
-gem "stimulus_reflex", "~> 3.2"
 gem 'devise'
+gem 'pg', '>= 0.18', '< 2.0'
 gem 'pry'
+gem "cable_ready", "~> 4.3"
+gem "redis", "~> 4.2"
+gem "stimulus_reflex", "~> 3.2"
