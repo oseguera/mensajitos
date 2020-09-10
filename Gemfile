@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use mysql in production
-gem 'mysql2'
+# gem 'mysql2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "redis", "~> 4.2"
 gem "cable_ready", "~> 4.3"
 gem "stimulus_reflex", "~> 3.2"
+gem 'devise'
+gem 'pry'

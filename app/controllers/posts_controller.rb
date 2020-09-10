@@ -7,7 +7,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.create(post_params)
+    modfied_params = post_params.merge(username: current_user.email)
+    post = Post.create(modfied_params)
     cable_ready['timeline'].insert_adjacent_html(
       selector: '#timeline',
       position: 'afterbegin',

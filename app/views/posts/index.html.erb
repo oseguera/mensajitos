@@ -3,6 +3,9 @@
 
   <h1>LatinTweet</h1>
   <small>A CableReady &amp; StimulusReflex demo by Emmanuel Oseguera</small>
+  <% if current_user %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% end %>
 
   <%= render 'form' %>
 

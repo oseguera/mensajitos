@@ -1,3 +1,4 @@
+<div class='container' data-controller='posts'>
 <%= form_with(model: @post, local: true, html: { class: 'my-4' }) do |form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -17,14 +18,16 @@
       placeholder: 'Enter a message...',
       class: 'form-control',
       rows: 3,
-      'data-action': 'keypress->posts#sendMessageWhenEnter'
+      'data-action': 'keypress->posts#sendMessageWhenEnter',
+      required: true
     %>
   </div>
 
   <div class="actions">
     <%= form.submit value: 'Send',
-      class: 'btn btn-primary',
+      class: 'btn btn-primary btn-lg',
       'data-target': 'posts.submitButton'
     %>
   </div>
 <% end %>
+</div>
