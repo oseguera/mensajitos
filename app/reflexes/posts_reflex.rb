@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class PostsReflex < ApplicationReflex
-  include CableReady::Broadcaster
   def repost
     post = Post.find(element.dataset[:id])
     post.increment! :reposts_count
