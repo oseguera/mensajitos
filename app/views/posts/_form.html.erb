@@ -15,16 +15,17 @@
   <div class="form-group">
     <%= form.label :body, 'Message'%>
     <%= form.text_area :body,
-      placeholder: 'Say something...',
+      placeholder: 'Write until 280 characters',
       class: 'form-control',
       rows: 3,
+      maxlength: 280,
       'data-action': 'keypress->posts#sendMessageWhenEnter',
       required: true
     %>
   </div>
 
   <div class="actions">
-    <%= form.submit value: 'Send',
+    <%= form.submit value: 'Create Post',
       class: 'btn btn-primary btn-lg',
       'data-target': 'posts.submitButton'
     %>
