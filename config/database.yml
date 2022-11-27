@@ -6,9 +6,12 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-development:
+development: &development
   <<: *default
   database: latin_twit_development
+  host: 'localhost'
+  user: 'latin_twit'
+  password: 'latintwit1'
 
 test: &test
   <<: *default
@@ -16,8 +19,4 @@ test: &test
 
 production:
   <<: *default
-  database: <%= ENV['DATABASE_URL']%>
-  host: <%= ENV['DB_HOST']%>
-  user: <%= ENV['DB_USER']%>
-  password: <%= ENV['DB_PASSWORD']%>
-  port: 5432
+  <<: *development
